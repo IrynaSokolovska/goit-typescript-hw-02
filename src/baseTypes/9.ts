@@ -1,8 +1,17 @@
 /*
   Створіть новий тип даних, який підходить для цих двох об'єктів.
 */
-
-const page1 = {
+type AllPages = {
+  title: string;
+  likes: number;
+  accounts: string[];
+  status: string;
+  details?: {
+    createAt: Date;
+    updateAt: Date;
+  };
+};
+const page1: AllPages = {
   title: 'The awesome page',
   likes: 100,
   accounts: ['Max', 'Anton', 'Nikita'],
@@ -13,11 +22,11 @@ const page1 = {
   }
 }
 
-const page2 = {
+const page2: AllPages = {
   title: 'Python or Js',
   likes: 5,
   accounts: ['Alex'],
   status: 'close',
 }
 
-export {};
+export {page1, page2};
